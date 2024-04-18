@@ -3,6 +3,8 @@
 ## 01. 2024-04-18
     - react-study project : STS4에서 생성
     - Spring boot dev, maria-driver, security, lombok
+    - react-study에서 ReactStudyApplication 에서
+        @SpringBootApplication(exclude = SecurityAutoConfiguration.class)
     - react-study에서 ReactStudyApplication 시작(8080)
     - react-study/src/main에서 
         npx create-react-app frontend

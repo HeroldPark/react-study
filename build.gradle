@@ -35,7 +35,7 @@ tasks.named('test') {
 	useJUnitPlatform()
 }
 
-def frontendDir = "$projectDir/src/main/frontend"
+def frontendDir = "$projectDir/frontend"
 
 sourceSets {
     main {
@@ -43,9 +43,7 @@ sourceSets {
         }
     }
 }
-
 processResources { dependsOn "copyReactBuildFiles" }
-
 task installReact(type: Exec) {
     workingDir "$frontendDir"
     inputs.dir "$frontendDir"
@@ -57,7 +55,6 @@ task installReact(type: Exec) {
         commandLine "npm", "audit", "fix" commandLine 'npm', 'install'
     }
 }
-
 task buildReact(type: Exec) {
     dependsOn "installReact"
     workingDir "$frontendDir"
@@ -69,7 +66,6 @@ task buildReact(type: Exec) {
         commandLine "npm", "run-script", "build"
     }
 }
-
 task copyReactBuildFiles(type: Copy) {
     dependsOn "buildReact"
     from "$frontendDir/build"
