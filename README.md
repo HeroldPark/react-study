@@ -67,3 +67,5 @@
     - backend, frontend 재시작한 후
         http://localhost:3000, http://localhost:8080 접속하면 동일한 화면을 볼 수 있다.
     
+## 02. 2024-04-20
+    - git에서 staging 하지 않아 frontend를 src/main/frontend로 move 한다.
